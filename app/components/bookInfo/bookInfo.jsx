@@ -1,20 +1,20 @@
 import Image from "next/image";
 import amazonLogo from "/public/amazonLogo.png";
 import firstBook from "/public/firstBook.jpg";
-import secondBook from "/public/secondBook.jpg";
+import book from "/public/book.webp";
 export default function BookInfo() {
   return (
     <>
-      <div className="w-full px-12 md:px-36 py-16 bg-[#1B2735] grid grid-cols-1 md:grid-cols-3">
-        <div className="col-span-2 h-96 py-12 grid items-center justify-around   text-white">
-          <p className="font-bold text-2xl md:text-4xl">
+      <div className="w-full px-12 md:px-36 py-8 md:py-16 bg-[#1B2735] grid grid-cols-1 md:grid-cols-3 lg:gap-x-20">
+        <div className="col-span-2  h-96 py-12 grid items-center justify-center  text-white">
+          <p className="font-bold text-2xl lg:text-5xl ">
             Intelligent Strategies: The path to tax free living
           </p>
-          <p className="text-md md:text-lg">
+          <p className="text-md lg:text-xl ">
             Get Your Copy of my book for financial freedom and smart tax-saving
             strategies! Available on the Amazon store now!
           </p>
-          <div className="w-24 h-12">
+          <div className="w-[187px] h-[58.38px]">
             <Image
               src={amazonLogo}
               alt="amazon logo"
@@ -22,17 +22,17 @@ export default function BookInfo() {
             />
           </div>
         </div>
-        <div className="relative  flex justify-center">
+        <div className="relative col-span-1  flex justify-center">
           <Image
-            src={firstBook}
+            src={book}
             alt="first book"
-            className="w-64 h-80 md:w-76 md:h-96 object-fill relative z-10"
+            className="w-full h-full object-fill relative z-10"
           />
-          <Image
+          {/* <Image
             src={secondBook}
             alt="second book"
             className="w-56 h-72 md:w-[262px] md:h-80 mt-6 md:mt-10 md:ml-36 ml-24 object-fill absolute "
-          />
+          /> */}
         </div>
       </div>
     </>

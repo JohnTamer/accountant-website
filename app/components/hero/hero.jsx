@@ -1,52 +1,58 @@
+import "./hero.css";
 import Image from "next/image";
-import heroBackground from "/public/background.png";
+import heroBackground from "/public/bg.png";
+import mobileBackground from "/public/mobileBg.webp";
 import accountantPicture from "/public/human.png";
 import Header from "../header/header";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
 export default function Hero() {
   return (
     <>
-      <div className="relative w-full    ">
-        <div className="absolute w-full h-[30rem] md:h-[36rem] backdrop-blur-md 	">
+      <div className="relative w-full">
+        <div className="absolute w-full h-[30rem] md:h-[42rem] 	">
           <Image
             src={heroBackground}
             alt="hero image"
-            className="w-full h-full object-scale-up"
+            className="w-full h-full object-fill hidden lg:block"
+          />
+          <Image
+            src={mobileBackground}
+            alt="hero image"
+            className="w-full h-full object-fill block lg:hidden"
           />
         </div>
-        <div className="relative  w-full h-[30rem] md:h-[36rem] backdrop-blur-[1.5px] grid   grid-cols-1 md:grid-cols-2 px-4 py-16 md:py-0 md:px-36   ">
-          <div className="flex flex-col w-full items-center justify-center ">
+        <div className="relative  w-full h-[30rem] md:h-[42rem] grid   grid-cols-1 md:grid-cols-3 px-4 py-16 md:py-0 md:px-12 lg:px-36    ">
+          <div className="flex flex-col   w-full h-full  justify-end md:justify-center md:px-12 lg:px-16 col-span-3 lg:col-span-2  ">
             <div className="flex  w-full items-center  ">
               {" "}
-              <p className="text-[#C1B494] font-extrabold text-xl md:text-4xl">
+              <span className="text-[#C1B494] font-extrabold text-xl md:text-5xl">
                 Mena Hemaia{" "}
-              </p>
-              <p className="text-md text-white ml-2 mt-2"> (CPA - CIA)</p>
+              </span>
+              <span className="md:text-2xl font-bold text-white ml-2 mt-1  md:mt-3 ">
+                {" "}
+                (CPA - CIA)
+              </span>
             </div>
 
-            <p className="text-white text-sm mt-2">
-              Finance, tax and accounting Expert, CEO of Accountack, Founder of
-              MenaTCP, Audit Committee Member I am licensed as a CPA and CIA.
+            <p className="text-white text-lg font-semibold mt-2 ">
+              Finance, tax and accounting Expert, CEO of Accountack, <br />
+              MenaTCP, Audit Committee Member <br /> I am licensed as a CPA and
+              CIA.
             </p>
 
             <div className="w-full ">
-              <div className="w-10 h-10 md:w-20 md:h-20  bg-gray-400 rounded-full mt-5 flex justify-center items-center ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-8 h-8 text-white"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+              <div className="w-10 h-10 md:w-[90px] md:h-[90px]  bg-gray-400 text-white rounded-full mt-5 flex justify-center items-center hover:bg-[#C1B494] hover:bg-opacity-40 hover:text-[#C1B494] hover:cursor-pointer ">
+                <FontAwesomeIcon
+                  icon={faPlay}
+                  className="text-xl ml-1 md:text-5xl text-center md:ml-2"
+                />
               </div>
             </div>
           </div>
 
-          <div className="flex w-full justify-center items-center ">
+          {/* <div className="flex w-full justify-center items-center ">
             <div className=" w-full h-56 md:h-96">
               {" "}
               <Image
@@ -55,9 +61,8 @@ export default function Hero() {
                 className="w-full h-full object-contain  "
               />
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="w-full h-36 -mt-36  bg-gradient-to-t from-[#1b2735] to-[#1b273500] relative"></div>
       </div>
     </>
   );

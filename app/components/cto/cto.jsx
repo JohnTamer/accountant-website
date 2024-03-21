@@ -1,23 +1,41 @@
 import Image from "next/image";
-import journal from "/public/journal.png";
+import topJournal from "/public/topJournal.webp";
+import bottomJournal from "/public/bottomJournal.webp";
+import newTimesLogo from "/public/timesLogo.webp";
 export default function Cto() {
   return (
     <>
-      <div className="w-full h-[20rem] md:h-[26rem] lg:h-[30rem] p-12 md:px-36 flex justify-center items-center relative bg-[#1B2735]">
-        <div className="text-white text-sm w-12/12 md:w-10/12 flex flex-col justify-between items-center gap-y-3  py-6 z-20 mt-10 ">
-          <p className="text-md md:text-2xl">New York Weekly</p>
-          <div className="w-full  text-center text-md md:text-2xl ">
-            <span className="text-[#C1B494] font-extrabold ">Mena Hemaia</span>{" "}
-            the king of the tax, finance, and accounting realm
-          </div>
-          <p className="underline">Read Article</p>
+      <div className="w-full h-fit   grid grid-cols-1 relative bg-[#1B2735]">
+        <div className=" md:h-[16rem]">
+          {" "}
+          <Image
+            src={topJournal}
+            alt="journal"
+            className="w-full h-full object-fill relative"
+          />
         </div>
-
-        <Image
-          src={journal}
-          alt="journal"
-          className="w-full h-full object-scale-up absolute"
-        />
+        <div className="text-white  text-sm w-12/12 md:w-12/12 flex flex-col justify-between items-center gap-y-3  py-6  ">
+          <div className="w-[352px]">
+            <Image src={newTimesLogo} alt="New Times Logo" />
+          </div>
+          <div className="w-11/12 md:w-7/12  text-center text-md  ">
+            <span className="text-[#C1B494] font-extrabold text-lg md:text-5xl ">
+              Mena Hemaia
+            </span>{" "}
+            <span className="text-lg lg:text-4xl font-bold">
+              the king of the tax, finance, and accounting realm
+            </span>
+          </div>
+          <p className="underline text-lg md:text-2xl">Read Article</p>
+        </div>
+        <div className=" md:h-[16rem]">
+          {" "}
+          <Image
+            src={bottomJournal}
+            alt="journal"
+            className="w-full h-full object-fill relative"
+          />
+        </div>
       </div>
     </>
   );

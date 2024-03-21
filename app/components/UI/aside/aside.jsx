@@ -1,8 +1,10 @@
+import Image from "next/image";
+import lightLogo from "/public/lightLogo.webp";
 export default function Aside({ toggleHeaderHandler, opacity }) {
   return (
     <>
       <aside
-        className={`bg-[#1B2735] w-72  md:w-80 h-[30rem] md:h-[36rem] absolute z-20 flex flex-col px-4 md:px-8 py-12 items-center ${
+        className={`bg-[#1B2735] w-72  md:w-80 h-[30rem] md:h-[44rem] absolute z-20 flex flex-col px-4 md:px-8 py-12 items-center ${
           opacity ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
       >
@@ -22,7 +24,10 @@ export default function Aside({ toggleHeaderHandler, opacity }) {
             />
           </svg>
         </div>
-        <div className="text-[#C1B494]">LOGO </div>
+        <div className="text-[#C1B494] w-24 h-16">
+          {" "}
+          <Image src={lightLogo} alt="logo" className="w-full h-full" />{" "}
+        </div>
         <hr className="w-56 h-[1px] mt-4 bg-[#C1B494] border-0 " />
         <ul className="mt-12 flex flex-col text-md text-white gap-3">
           <li>About Mena Hemaia</li>
