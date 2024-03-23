@@ -1,8 +1,4 @@
 "use client";
-
-import { useState } from "react";
-import YouTube from "react-youtube";
-
 export default function VideoModal({ isVisible, productImage, setIsvisible }) {
   const closeModalHandler = () => {
     setIsvisible(false);
@@ -10,7 +6,10 @@ export default function VideoModal({ isVisible, productImage, setIsvisible }) {
   if (!isVisible) return null;
   return (
     <>
-      <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm z-50 flex flex-col justify-center items-center p-4 ">
+      <div
+        className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-md z-50 flex flex-col justify-center items-center p-4 "
+        onClick={closeModalHandler}
+      >
         <div className="place-self-end  hover:cursor-pointer">
           <p
             className="text-5xl mr-2 mb-2 text-white"
@@ -20,18 +19,7 @@ export default function VideoModal({ isVisible, productImage, setIsvisible }) {
           </p>
         </div>
         <div className="w-full md:w-[50vw] h-96 md:h-[38rem] rounded-xl bg-white ">
-          {/* <Image
-          src={productImage}
-          alt="image"
-          className="w-full h-full object-fit rounded-xl"
-        /> */}
-          {/* <YouTube
-            videoId="v07gXY6ESEo"
-            opts={{ height: "608px", width: "100%" }}
-          ></YouTube> */}
           <iframe
-            // width="100%"
-            // height="608"
             className="w-full h-full"
             src="https://www.youtube.com/embed/v07gXY6ESEo?si=uXcOgPdMugvp4g2d"
             title="YouTube video player"
