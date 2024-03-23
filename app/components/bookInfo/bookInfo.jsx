@@ -21,7 +21,11 @@ export default function BookInfo() {
           </p>
           <div className="w-[187px] h-[58.38px]">
             <Image
-              onClick={() => openNewTabHandler("https://www.amazon.com/")}
+              onClick={() =>
+                openNewTabHandler(
+                  "https://www.amazon.com/Intelligent-Strategies-path-free-living/dp/B0CM4DVYBW"
+                )
+              }
               src={amazonLogo}
               alt="amazon logo"
               className="w-full h-full object-fill hover:cursor-pointer"
@@ -30,7 +34,11 @@ export default function BookInfo() {
         </div>
         <div className="relative col-span-1  flex justify-center">
           <Image
-            onClick={() => openNewTabHandler("https://www.amazon.com/")}
+            onClick={() =>
+              openNewTabHandler(
+                "https://www.amazon.com/Intelligent-Strategies-path-free-living/dp/B0CM4DVYBW"
+              )
+            }
             src={book}
             alt="first book"
             className="w-full h-full object-fill relative z-10 hover:cursor-pointer"

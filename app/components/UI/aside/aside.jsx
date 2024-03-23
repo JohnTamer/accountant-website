@@ -41,12 +41,12 @@ export default function Aside({ toggleHeaderHandler, opacity }) {
           >
             About Mena Hemaia
           </Link>
-          <li
+          {/* <li
             onClick={toggleHeaderHandler}
             className="hover:cursor-pointer hover:text-[#C1B494]"
           >
             Watch Video
-          </li>
+          </li> */}
           <Link
             onClick={toggleHeaderHandler}
             href="/#book"

@@ -11,6 +11,11 @@ const CARDS = [
     cardWebsite: "www.Accountack.com",
     cardImage: accountackLogo,
     imageHeight: "h-36",
+    socials: {
+      linkedin: "https://www.linkedin.com/company/accountack/",
+      instagram: "https://www.instagram.com/accountack.cpa/",
+      facebook: "https://www.facebook.com/Accountack/",
+    },
   },
   {
     id: 2,
@@ -21,6 +26,11 @@ const CARDS = [
     cardWebsite: "www.MenaTCP.com",
     cardImage: tcpLogo,
     imageHeight: "h-44",
+    socials: {
+      linkedin: "https://www.linkedin.com/company/menatcp",
+      instagram: "https://www.instagram.com/menatcp",
+      facebook: "https://www.facebook.com/Menatcp",
+    },
   },
 ];
 export default function Interested() {
@@ -28,14 +38,14 @@ export default function Interested() {
     <>
       <div
         id="interested"
-        className="w-full h-fit px-12 lg:px-36 3xl:px-96  py-12 bg-[#2F3A4C] grid grid-cols-1 xl:grid-cols-10 align-middle justify-items-center xl:gap-x-5    gap-y-5"
+        className="w-full h-fit px-12 lg:px-36 3xl:px-96  py-12 bg-[#2F3A4C] grid grid-cols-1 xl:grid-cols-10 2xl:grid-cols-8 align-middle justify-items-center xl:gap-x-5 2xl:gap-x-20    gap-y-5"
       >
         {/* {CARDS?.map((card) => ( */}
-        <div className="col-span-5 w-full grid justify-center  ">
+        <div className="col-span-5 2xl:col-span-4 w-full grid justify-center 2xl:justify-end  ">
           {" "}
           <Card cardData={CARDS[0]} />
         </div>
-        <div className="col-span-5 w-full grid justify-center  ">
+        <div className="col-span-5 2xl:col-span-4 w-full grid justify-center 2xl:justify-start ">
           {" "}
           <Card cardData={CARDS[1]} />
         </div>

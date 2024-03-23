@@ -33,7 +33,13 @@ export default function Card({ cardData }) {
           </div>
           <div className="w-full flex flex-col md:flex-row items-center justify-center gap-x-4 gap-y-2 text-sm md:text-md font-bold px-3 lg:px-12 text-[#2F3A4C]  ">
             Contact {cardData.cardName} :{" "}
-            <Socials width="w-8" height="h-8" gapX="gap-x-4" white="true" />
+            <Socials
+              width="w-8"
+              height="h-8"
+              gapX="gap-x-4"
+              white="true"
+              socials={cardData.socials}
+            />
           </div>
         </div>
       </div>
