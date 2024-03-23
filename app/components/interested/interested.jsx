@@ -26,7 +26,10 @@ const CARDS = [
 export default function Interested() {
   return (
     <>
-      <div className="w-full h-fit px-12 lg:px-36 3xl:px-96  py-12 bg-[#2F3A4C] grid grid-cols-1 xl:grid-cols-10 align-middle justify-items-center xl:gap-x-5    gap-y-5">
+      <div
+        id="interested"
+        className="w-full h-fit px-12 lg:px-36 3xl:px-96  py-12 bg-[#2F3A4C] grid grid-cols-1 xl:grid-cols-10 align-middle justify-items-center xl:gap-x-5    gap-y-5"
+      >
         {/* {CARDS?.map((card) => ( */}
         <div className="col-span-5 w-full grid justify-center  ">
           {" "}

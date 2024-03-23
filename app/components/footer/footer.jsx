@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import Socials from "../UI/socials/socials";
 import lightLogo from "/public/lightLogo.webp";
+import Link from "next/link";
+import { openNewTabHandler } from "@/app/utils/openNewTabHandler";
 export default function Footer() {
   return (
     <>
@@ -28,19 +31,41 @@ export default function Footer() {
             <Image src={lightLogo} alt="logo" className="w-full h-full" />
           </div>
           <div>
-            <ul>
-              <li className="text-[#C1B494] text-2xl font-bold">Quick Links</li>
-              <li className="mt-3  text-white text-md ">About me</li>
-              <li className="text-md  text-white">
+            <ul className="flex flex-col">
+              <Link href="" className="text-[#C1B494] text-2xl font-bold">
+                Quick Links
+              </Link>
+              <Link
+                href="/#about"
+                className="mt-3  text-white text-md hover:cursor-pointer hover:text-[#C1B494] "
+              >
+                About me
+              </Link>
+              <Link
+                href="/#book"
+                className="text-md  text-white hover:cursor-pointer hover:text-[#C1B494]"
+              >
                 Intelligent Strategies Book
+              </Link>
+              <li className="text-md  text-white hover:cursor-pointer hover:text-[#C1B494]">
+                Subscribe
               </li>
-              <li className="text-md  text-white">Subscribe</li>
             </ul>
           </div>
           <div>
             <ul className="text-md  text-white mt-10 ">
-              <li className="w-full">Visit Accountack Website</li>
-              <li>Visit MenaTCP Website</li>
+              <li
+                onClick={() => openNewTabHandler(`https://www.accountack.com/`)}
+                className="w-full hover:cursor-pointer hover:text-[#C1B494]"
+              >
+                Visit Accountack Website
+              </li>
+              <li
+                onClick={() => openNewTabHandler(`https://www.menatcp.com/`)}
+                className="hover:cursor-pointer hover:text-[#C1B494]"
+              >
+                Visit MenaTCP Website
+              </li>
             </ul>
           </div>
         </div>
@@ -51,7 +76,15 @@ export default function Footer() {
 
         <div className="flex w-full flex-col md:flex-row items-center gap-y-5 md:mt-5 md:justify-between">
           <div className="text-md text-white">
-            © Copyright 2022, All Rights Reserved by Innovation Scope
+            © Copyright 2024, All Rights Reserved by{" "}
+            <span
+              className="hover:cursor-pointer hover:text-[#C1B494]"
+              onClick={() =>
+                openNewTabHandler(`https://www.innovationscope.com/`)
+              }
+            >
+              Innovation Scope
+            </span>
           </div>
           <div>
             <Socials width="w-8" height="h-8" gapX="gap-x-5" white="true" />

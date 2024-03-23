@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Socials from "../socials/socials";
+import { openNewTabHandler } from "@/app/utils/openNewTabHandler";
 
 export default function Card({ cardData }) {
   return (
@@ -21,7 +23,12 @@ export default function Card({ cardData }) {
           <div className="w-full text-center text-md font-medium px-4 lg:px-16 text-[#1B2735]">
             {cardData.cardParagraph}
           </div>
-          <div className="w-56 h-fit p-2 text-center text-md font-semibold bg-[#C1B494] text-[#2F3A4C] rounded-md hover:cursor-pointer">
+          <div
+            onClick={() =>
+              openNewTabHandler(`https://www.${cardData.cardName}.com/`)
+            }
+            className="w-56 h-fit p-2 text-center text-md font-semibold bg-[#C1B494] text-[#2F3A4C] rounded-md hover:cursor-pointer"
+          >
             {cardData.cardWebsite}
           </div>
           <div className="w-full flex flex-col md:flex-row items-center justify-center gap-x-4 gap-y-2 text-sm md:text-md font-bold px-3 lg:px-12 text-[#2F3A4C]  ">

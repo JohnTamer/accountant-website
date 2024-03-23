@@ -3,7 +3,10 @@ import Socials from "../UI/socials/socials";
 export default function AboutUs() {
   return (
     <>
-      <div className="w-full bg-[#1B2735] h-fit p-12 lg:p-36  grid grid-cols-1">
+      <div
+        id="about"
+        className="w-full bg-[#1B2735] h-fit p-12 lg:p-36  grid grid-cols-1"
+      >
         <div className="relative   flex  items-end     ">
           <p className="absolute  font-bold text-8xl text-white text-opacity-30	">
             About

@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import topJournal from "/public/topJournal.webp";
 import bottomJournal from "/public/bottomJournal.webp";
 import newTimesLogo from "/public/timesLogo.webp";
+import { openNewTabHandler } from "@/app/utils/openNewTabHandler";
 export default function Cto() {
   return (
     <>
@@ -26,7 +28,12 @@ export default function Cto() {
               the king of the tax, finance, and accounting realm
             </span>
           </div>
-          <p className="underline text-lg md:text-2xl">Read Article</p>
+          <p
+            className="underline text-lg md:text-2xl hover:cursor-pointer"
+            onClick={() => openNewTabHandler("https://www.amazon.com/")}
+          >
+            Read Article
+          </p>
         </div>
         <div className=" md:h-[16rem]">
           {" "}
