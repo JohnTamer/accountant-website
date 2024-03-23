@@ -1,3 +1,4 @@
+"use client";
 import "./hero.css";
 import Image from "next/image";
 import heroBackground from "/public/bg.png";
@@ -6,10 +7,24 @@ import accountantPicture from "/public/human.png";
 import Header from "../header/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import VideoModal from "../videoModal/videoModal";
+import { useState } from "react";
 
 export default function Hero() {
+  const [isVisible, setIsvisible] = useState(false);
+  const [productImage, setProductImage] = useState();
+  const openModalHandler = (productImage) => {
+    setIsvisible(true);
+    setProductImage(productImage);
+  };
+
   return (
     <>
+      <VideoModal
+        isVisible={isVisible}
+        setIsvisible={setIsvisible}
+        productImage={productImage}
+      />
       <div className="relative w-full">
         <div className="absolute w-full h-[30rem] md:h-[42rem] 	">
           <Image
@@ -43,7 +58,10 @@ export default function Hero() {
             </p>
 
             <div className="w-full ">
-              <div className="w-10 h-10 md:w-[90px] md:h-[90px]  bg-gray-400 text-white rounded-full mt-5 flex justify-center items-center hover:bg-[#C1B494] hover:bg-opacity-40 hover:text-[#C1B494] hover:cursor-pointer ">
+              <div
+                onClick={openModalHandler}
+                className="w-10 h-10 md:w-[90px] md:h-[90px]  bg-gray-400 text-white rounded-full mt-5 flex justify-center items-center hover:bg-[#C1B494] hover:bg-opacity-40 hover:text-[#C1B494] hover:cursor-pointer "
+              >
                 <FontAwesomeIcon
                   icon={faPlay}
                   className="text-xl ml-1 md:text-5xl text-center md:ml-2"
