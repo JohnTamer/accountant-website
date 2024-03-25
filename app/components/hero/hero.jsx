@@ -1,10 +1,10 @@
 "use client";
 import "./hero.css";
 import Image from "next/image";
-import heroBackground from "/public/bg.png";
+import heroBackground from "/public/bg.jpg";
 import mobileBackground from "/public/mobileBg.webp";
-import accountantPicture from "/public/human.png";
-import Header from "../header/header";
+import accountantPicture from "/public/person.webp";
+import shade from "/public/shade.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import VideoModal from "../videoModal/videoModal";
@@ -32,13 +32,14 @@ export default function Hero() {
             alt="hero image"
             className="w-full h-full object-fill hidden lg:block"
           />
+
           <Image
             src={mobileBackground}
             alt="hero image"
             className="w-full h-full object-fill block lg:hidden"
           />
         </div>
-        <div className="relative  w-full h-[30rem] md:h-[42rem] grid   grid-cols-1 md:grid-cols-3 px-4 py-16 md:py-0 md:px-12 lg:px-36    ">
+        <div className="relative    w-full h-[30rem] md:h-[42rem] grid   grid-cols-1 md:grid-cols-3 px-4 py-16 md:py-0 md:px-12 lg:px-36    ">
           <div className="flex flex-col   w-full h-full  justify-end md:justify-center md:px-12 lg:px-16 col-span-3 lg:col-span-2  ">
             <div className="flex  w-full items-center  ">
               {" "}
@@ -69,17 +70,21 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          {/* <div className="flex w-full justify-center items-center ">
-            <div className=" w-full h-56 md:h-96">
-              {" "}
-              <Image
-                src={accountantPicture}
-                alt="accountant picture"
-                className="w-full h-full object-contain  "
-              />
-            </div>
-          </div> */}
+          <div>
+            {" "}
+            <Image
+              src={accountantPicture}
+              alt="hero image"
+              className="w-96 h-fit object-fill absolute bottom-0 z-20 hidden lg:block"
+            />
+          </div>
+        </div>
+        <div>
+          <Image
+            src={shade}
+            alt="hero image"
+            className="w-fit h-fit object-fill absolute -bottom-1  z-20 hidden lg:block"
+          />
         </div>
       </div>
     </>
